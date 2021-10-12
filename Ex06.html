@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện bàn phím</title>
+</head>
+<body onload="doReady()">
+<img id="Girl" src="https://kenh14cdn.com/203336854389633024/2021/5/7/photo-1-1620357521007570953168.jpg" style="position: absolute;left: 0; top: 0"
+     height="600" width="480"/>
+
+<script>
+function upArrowPressed() {
+    let element = document.getElementById("Girl");
+    element.style.top = parseInt(element.style.top) - 10 +'px';
+}
+
+function downArrowPressed() {
+    let element = document.getElementById("Girl");
+    element.style.top = parseInt(element.style.top) + 10 + 'px';
+}
+
+function  leftArrownPressed() {
+    let element = document.getElementById("Girl");
+    element.style.left = parseInt(element.style.left) - 10 + 'px';
+}
+
+function  rightArrowPressed() {
+    let element = document.getElementById("Girl");
+    element.style.left = parseInt(element.style.left) + 10 + 'px';
+}
+
+function moveSelection(evt) {
+    switch (evt.keyCode) {
+        case 37:
+            leftArrownPressed();
+            break;
+        case 39:
+            rightArrowPressed();
+            break;
+        case 38:
+            upArrowPressed();
+            break;
+        case 40:
+            downArrowPressed();
+            breark;
+    }
+}
+
+function doReady() {
+    window.addEventListener('keydown',moveSelection);
+}
+</script>
+</body>
+</html>
