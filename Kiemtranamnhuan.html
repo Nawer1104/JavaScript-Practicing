@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra năm nhuận</title>
+</head>
+<body>
+<script>
+    // let year = parseInt(prompt('Điền số năm'));
+    // if (year%4==0){
+    //     if (year%100==0){
+    //         if (year%400==0){
+    //             alert(year + 'Là năm nhuận');
+    //         } else {
+    //             alert(year + 'Không phải năm nhuận')
+    //         }
+    //     } else {
+    //         alert(year +'Là năm nhuận')
+    //     }
+    // } else {
+    //     alert(year + 'Không là năm nhuận')
+    // }
+
+    let year = parseInt(prompt("Điền số năm:"));
+    let laNamnhuan = false;
+
+    if (year %4==0){
+        if (year %100==0){
+            if (year %400==0){
+                laNamnhuan = true;
+            }
+        }else {
+            laNamnhuan = true;
+        }
+    }
+    if (laNamnhuan){
+        alert(year + "La Nam Nhuan")
+    }else {
+        alert(year + 'Khong La Nam Nhuan')
+    }
+</script>
+</body>
+</html>
