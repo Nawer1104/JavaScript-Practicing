@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you love me?</title>
+</head>
+<body>
+<div>
+    <h1 style="position: absolute; left: 800px; top: 350px">DO YOU LOVE ME?</h1>
+    <input type="button" value="Yes!!" onclick="suRe()" style="position: absolute; left: 850px; top: 425px" id="ye">
+    <input type="button" value="Never!!" onmouseover="nO()" style="position: absolute; left: 950px; top: 425px" id="no">
+</div>
+<script>
+function suRe(){
+    alert('I <3 U Too');
+}
+function nO() {
+    let x = window.innerWidth;
+    let y = window.innerHeight;
+    document.getElementById('no').style.left = Math.round(x*Math.random()) + 'px';
+    document.getElementById('no').style.top = Math.round(y*Math.random()) + 'px';
+}
+</script>
+</body>
+</html>
