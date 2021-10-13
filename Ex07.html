@@ -7,10 +7,11 @@
 <body>
 
 <script>
-let a = parseInt(prompt('Nhap can nang cua ban',''));
-let b = parseInt(prompt('Nhap chieu cao cua ban',''));
+let a = parseFloat(prompt('Nhap can nang cua ban',''));
+let b = parseFloat(prompt('Nhap chieu cao cua ban',''));
 
-let bmi = a / (b**2);
+let bmi = a/(b**2);
+alert('BMI =' +bmi);
 if (bmi <= 18.5){
     alert('Underweight');
 } else if (bmi < 25){
