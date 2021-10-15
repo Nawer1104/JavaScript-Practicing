@@ -5,39 +5,37 @@
     <title>Luyện tập Loop1</title>
 </head>
 <body>
-<!--<input type="button" name="button" onclick="DoanSo()" value="Click Here To Play">-->
+<input type="button" name="button" onclick="DoanSo()" value="Click Here To Play">
 <script>
-    // function DoanSo(){
-    //     let min = +prompt('Nhập giá trị nhỏ nhất');
-    //     let max = +prompt('Nhập giá trị lớn nhất');
-    //     let a = +prompt('Nhập giá trị dự đoán');
-    //
-    //     let b = Math.floor(Math.random() * (max - min)) + min;
-    //
-    //     while (a < min || a > max){
-    //         alert('Bạn nhập cái gì thế?')
-    //         a = +prompt('Nhập lại đê:')
-    //     }
-    //     if ( a !== b ){
-    //         let i = 0;
-    //         while ( a !== b ){
-    //             if ( a < b ) {
-    //                 alert('Hơi nhỏ ròi bạn!');
-    //             } else if ( a > b ) {
-    //                 alert("Lớn quá rồi bạn!");
-    //             }
-    //             a = +prompt('Đoán lại phát nữa xem nào!');
-    //             i++
-    //             if (i === 2){
-    //                 alert('Hết lượt rùi bạn ơi');
-    //                 break
-    //             }
-    //         }
-    //     } else {
-    //         alert('Chúc mừng bạn đã đoán đúng!');
-    //     }
-    // }
-    // document.write('Số chính xác là:' + b);
+    function DoanSo(){
+        let min = +prompt('Nhập giá trị nhỏ nhất');
+        let max = +prompt('Nhập giá trị lớn nhất');
+        let a = +prompt('Nhập giá trị dự đoán');
+
+        let b = Math.floor(Math.random() * (max - min)) + min;
+
+        while (a < min || a > max){
+            alert('Bạn nhập cái gì thế?')
+            a = +prompt('Nhập lại đê:')
+        }
+        if ( a !== b ){
+            let i = 0;
+            while ( a !== b ){
+                if ( a < b ) {
+                    alert('Hơi nhỏ ròi bạn!');
+                } else if ( a > b ) {
+                    alert("Lớn quá rồi bạn!");
+                }
+                a = +prompt('Đoán lại phát nữa xem nào!');
+                i++
+                if (i === 3){
+                    alert('Hết lượt rùi bạn ơi');
+                    break
+                }
+            }
+        }alert('Chúc mừng bạn đã đoán đúng!');
+    }
+
 
 
 
