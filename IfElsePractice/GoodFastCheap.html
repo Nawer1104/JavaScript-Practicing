@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập 2</title>
+</head>
+<body>
+<table style="border-spacing: 10px ">
+    <tr>
+        <th>Good</th>
+        <td>
+            <label for="good">
+                <input type="checkbox" id="good" onchange="checkGood()">
+            </label>
+        </td>
+    </tr>
+    <tr>
+        <th>Fast</th>
+        <td>
+            <label for="fast">
+                <input type="checkbox" id="fast" onchange="checkFast()">
+            </label>
+        </td>
+    </tr>
+    <tr>
+        <th>Cheap</th>
+        <td>
+            <label for="cheap">
+                <input type="checkbox" id="cheap" onchange="checkCheap()">
+            </label>
+        </td>
+    </tr>
+</table>
+<script>
+    let good = document.getElementById('good');
+    let fast = document.getElementById('fast');
+    let cheap = document.getElementById('cheap');
+    good.checked = false;
+    fast.checked = false;
+    cheap.checked = false;
+
+    function checkGood(){
+        if (cheap && fast){
+            cheap.checked = false;
+    }
+}
+    function checkFast(){
+        if (good && cheap){
+            good.checked = false;
+        }
+    }
+    function checkCheap(){
+        if (good && fast){
+            fast.checked = false;
+        }
+    }
+</script>
+</body>
+</html>
