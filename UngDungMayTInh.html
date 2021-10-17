@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+<input type="number" id="number1">
+<input type="number" id="number2">
+<button type="button" id="subtracTion" onclick="doMatch2()">Subtraction(-)</button>
+<button type="button" id="multiplicaTion" onclick="doMatch3()">Multiplication(X)</button>
+<button type="button" id="addiTion" onclick="doMatch1()">Addition(+)</button>
+<button type="button" id="diviSion" onclick="doMatch4()">Division(/)</button>
+    <p id="result"></p>
+</form>
+
+<script>
+    function doMatch1() {
+        let a = parseInt(document.getElementById("number1").value);
+        let b = parseInt(document.getElementById("number2").value);
+        document.getElementById('result').innerHTML = "Result Addition :" + (a + b);
+    }
+    function doMatch2() {
+        let a = parseInt(document.getElementById("number1").value);
+        let b = parseInt(document.getElementById("number2").value);
+        document.getElementById('result').innerHTML = "Result Subtraction :" + (a - b);
+    }
+    function doMatch3() {
+        let a = parseInt(document.getElementById("number1").value);
+        let b = parseInt(document.getElementById("number2").value);
+        document.getElementById('result').innerHTML = "Result Multiplication :" + (a * b);
+    }
+    function doMatch4() {
+        let a = parseInt(document.getElementById("number1").value);
+        let b = parseInt(document.getElementById("number2").value);
+        document.getElementById('result').innerHTML = "Result Division :" + (a / b);
+    }
+
+</script>
+</body>
+</html>
