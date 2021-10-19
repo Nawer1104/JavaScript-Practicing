@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<script>
+    let number = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+    let max = number[0]
+    let position;
+    for (let i = 0; i < number.length; i++) {
+        if (number[i] > number[0] ) {
+            max = number[i];
+            position = i;
+        }
+    }
+    alert('So lon nhat la: ' + max);
+    alert('Vi tri cua so lon nhat la :' + position);
+
+    let sum = 0;
+    for (let j = 0; j < number.length; j++) {
+        sum += number[j];
+    }
+    let avg = (sum / number.length);
+    document.write('Gia tri trung binh la :' + avg);
+</script>
+</body>
+</html>

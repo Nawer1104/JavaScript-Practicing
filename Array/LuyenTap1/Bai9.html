@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 9</title>
+</head>
+<body>
+<script>
+    let arr1 = [];
+    for (let i = 0; i < 10; i++) {
+        arr1[i] = Math.floor(Math.random() * 100);
+    }
+
+    let arr2 = [];
+    for (let i = 0; i < 10; i++) {
+        arr2[i] = Math.floor(Math.random() * 100);
+    }
+    let arr3 = arr1.concat(arr2);
+    document.write(arr1 + '<br>' + '<hr>');
+    document.write(arr2 + '<br>' + '<hr>');
+    document.write(arr3 + '<br>' + '<hr>');
+
+</script>
+</body>
+</html>

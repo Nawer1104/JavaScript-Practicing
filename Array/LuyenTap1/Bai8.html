@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 8</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        arr[i] = prompt('Nhap gia tri');
+    }
+    arr.sort(function (a, b) {
+        return b - a;
+    })
+    document.write(arr)
+</script>
+</body>
+</html>
