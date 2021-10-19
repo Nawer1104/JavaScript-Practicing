@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 6</title>
+</head>
+<body>
+<button onclick="createArr()">Create an Array</button>
+<br><br>
+<button onclick="transForm()">Transform the array</button>
+<br><br>
+<h1 id="result"></h1>
+<br>
+<h2 id="result2"></h2>
+<script>
+    let arr = [];
+
+    function createArr() {
+        do {
+            sizeArr = +prompt('Enter a size of Array :');
+        }
+        while (sizeArr <= 0)
+
+        for (let i = 0; i < sizeArr; i++) {
+            arr[i] = prompt('Enter a characters of ' + i + ':');
+        }
+        document.getElementById('result').innerHTML = arr;
+    }
+
+    function transForm() {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === "-") {
+                arr[i] = "_";
+            }
+        }document.getElementById('result2').innerHTML = arr;
+    }
+</script>
+</body>
+</html>

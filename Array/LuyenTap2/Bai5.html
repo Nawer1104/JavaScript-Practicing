@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5</title>
+</head>
+<body>
+<button onclick="createArr1()">Create an Array One</button>
+<br><br>
+<button onclick="createArr2()">Create an Array Two</button>
+<br><br>
+<button onclick="check()">Let's Check</button>
+<script>
+    let arr1 = [];
+    let arr2 = [];
+
+    function createArr1() {
+        do {
+            sizeArr = +prompt('Enter a size of Array :');
+        }
+        while (sizeArr <= 0)
+
+        for (let i = 0; i < sizeArr; i++) {
+            arr1[i] = prompt('Enter a characters of ' + i + ':');
+        }
+    }
+
+    function createArr2() {
+        do {
+            sizeArr = +prompt('Enter a size of Array :');
+        }
+        while (sizeArr <= 0)
+
+        for (let i = 0; i < sizeArr; i++) {
+            arr2[i] = prompt('Enter a characters of ' + i + ':');
+        }
+    }
+
+    function check() {
+        if (arr1.length !== arr2.length) {
+            alert('These two are different')
+        } else {
+            for (let i = 0; i < arr1.length; i++) {
+                if (arr1[i] !== arr2[i]) {
+                    alert('These two are different')
+                }
+            }
+            alert('These two are the same')
+        }
+    }
+
+
+</script>
+</body>
+</html>
