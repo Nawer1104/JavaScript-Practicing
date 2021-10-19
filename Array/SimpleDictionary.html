@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Dictionary</title>
+</head>
+<body>
+<label><input type="text" id="input"></label><br>
+<button type="button" onclick="tranSlate()" value="Transale">Translate</button>
+<h1 id="output"></h1>
+
+<script>
+    function tranSlate() {
+        let engLish = ['Hello', 'Morning', 'Good', 'Bye'];
+        let vietNamese = ['Xin Chào', 'Buổi Sáng', 'Tốt', 'Chào'];
+        let x = document.getElementById("input").value;
+        let result = true;
+
+        for (let i = 0; i < engLish.length; i++) {
+            if (x === engLish[i]) {
+                document.getElementById('output').innerHTML = vietNamese[i];
+                result = true;
+                break
+            }
+            if (x !== engLish[i]) {
+                result = false;
+            }
+                }
+        if ( result === false) {
+            document.getElementById('output').innerHTML = "Không tìm thấy";
+        }
+    }
+</script>
+</body>
+</html>
