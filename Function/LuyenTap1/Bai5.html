@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5</title>
+</head>
+<body>
+<input type="text" id="inputName">
+<button type="button" onclick="searchStar()">Check Me</button>
+<p id="result"></p>
+<script>
+    let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let arr3 = "";
+
+
+    function searchStar() {
+        let x = document.getElementById("inputName").value;
+        for (let i = 0; i < arr1.length; i++) {
+            if ( x === arr1[i]) {
+                arr3 = arr2[i]
+                document.getElementById('result').innerHTML = arr3
+                break
+            }
+           if ( x !== arr1[i]) {
+               arr3 = 'Không tìm thấy'
+               document.getElementById('result').innerHTML = arr3
+           }
+        }
+    }
+</script>
+</body>
+</html>
