@@ -5,12 +5,16 @@
     <title>Kiểm tra số nguyên tố</title>
 </head>
 <body>
-<form>
+
     <label> Nhập một số nguyên tố:
         <input type="number" id="inputNumber" oninput="isPrime(this.value)">
     </label>
     <p>Số đó là : <span id="result"></span></p>
-</form>
+    <br><br>
+    <button id="allPrime" onclick="printPrime()">Check All The Prime Less Than 1000</button>
+    <p>Tất cả các số nguyên tốt < 1000 : <span id="result2"></span></p>
+
+
 <script>
     function isPrime(number) {
         let flag = true;
@@ -28,6 +32,24 @@
             document.getElementById("result").innerHTML = "Số Nguyên Tố"
         } else {
             document.getElementById("result").innerHTML = "Không Là Số Nguyên Tố"
+        }
+    }
+
+    function printPrime() {
+        for (let i = 0; i < 1000; i++) {
+          if ( i < 2) {
+              continue
+          } else {
+              let check = true
+              for (let j = 2; j < i - 1; j++) {
+                  if (i % j === 0) {
+                      check = false
+                      break
+                  }
+              }if (check) {
+                  document.write(i + '<br>')
+              }
+          }
         }
     }
 </script>
