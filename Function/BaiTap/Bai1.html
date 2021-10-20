@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên tố</title>
+</head>
+<body>
+<form>
+    <label> Nhập một số nguyên tố:
+        <input type="number" id="inputNumber" oninput="isPrime(this.value)">
+    </label>
+    <p>Số đó là : <span id="result"></span></p>
+</form>
+<script>
+    function isPrime(number) {
+        let flag = true;
+        if (number < 2 ) {
+            flag = false
+        } else {
+            for (let i = 2; i < number - 1; i++) {
+                if ( number % i === 0) {
+                    flag = false
+                    break
+                }
+            }
+        }
+        if (flag === true) {
+            document.getElementById("result").innerHTML = "Số Nguyên Tố"
+        } else {
+            document.getElementById("result").innerHTML = "Không Là Số Nguyên Tố"
+        }
+    }
+</script>
+</body>
+</html>
