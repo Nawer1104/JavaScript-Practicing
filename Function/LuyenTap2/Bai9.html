@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai9</title>
+</head>
+<body>
+<script>
+    createArr()
+ function createArr() {
+     let arr = [1, 1 , 1, 1, 1, 2, 3, 4, 5, 6, 5, 7, 8]
+     let x  = +prompt('Enter a number X');
+     let value = checkX(arr, x)
+     if (value === 0) {
+         alert('X doesnt in Array')
+     }   else {
+         alert('X happened in Array ' + value + ' time')
+     }
+ }
+
+ function checkX(arr, x) {
+        let times = 0
+     for (let i = 0; i < arr.length; i++) {
+         if (x === arr[i]) {
+             times++
+         }
+     }return times
+ }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai6</title>
+</head>
+<body>
+<script>
+    function checkPositiveIntegers() {
+        let number = +prompt('Enter a Number:')
+        if (number === 0) {
+            alert('Not a Positive Integer');
+        } else if (number > 0 && number % 1 === 0 ) {
+            alert('Is a Positive Integer')
+        } else {
+            alert('Not a Positive Integer')
+        }
+    }
+
+checkPositiveIntegers()
+</script>
+</body>
+</html>

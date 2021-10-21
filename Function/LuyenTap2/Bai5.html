@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai5</title>
+</head>
+<body>
+<script>
+function checkMin () {
+    let number1 = +prompt('Enter Number 1:')
+    let number2 = +prompt('Enter Number 2:')
+    let number3 = +prompt('Enter Number 3:')
+    if (number1 < number2) {
+        if (number1 < number3) {
+            alert('Number 1: ' + number1 + ' is smallest');
+        } else if (number3 < number1 ) {
+            alert('Number 3: ' + number3 + ' is smallest');
+        }
+    }
+    if (number2 < number1) {
+        if (number2 < number3) {
+            alert('Number 2: ' + number2 + ' is smallest');
+        } else if (number3 < number2) {
+            alert('Number 3: ' + number3 + ' is smallest');
+        }
+    }
+}
+checkMin()
+</script>
+</body>
+</html>
