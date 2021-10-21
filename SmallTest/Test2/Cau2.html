@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau 2</title>
+</head>
+<body>
+<button onclick="createArr()">Create an Array</button>
+<br><br>
+<button onclick="checkCharacter(arr)">Check Character</button>
+<br><br>
+
+<script>
+    let arr = [];
+
+    function createArr() {
+        do {
+            sizeArr = +prompt('Enter a size of Array :');
+        }
+        while (sizeArr <= 0)
+
+        for (let i = 0; i < sizeArr; i++) {
+            arr[i] = prompt('Enter a characters of ' + i + ':');
+        }
+    }
+
+    function checkCharacter(arr) {
+        let x = prompt('Enter a character in here: ');
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (x === arr[i]) {
+                count++
+            }
+        }
+        alert('The ' + x + ' happened in the Array ' + count + ' time!')
+    }
+</script>
+</body>
+</html>

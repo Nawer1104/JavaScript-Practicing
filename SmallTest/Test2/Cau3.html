@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau 3</title>
+</head>
+<body>
+<button onclick="createArr()">Create an Array</button>
+<br><br>
+<button onclick="doMatch(arr)">Total = ?? Want to know?</button>
+<br><br>
+
+<script>
+    let arr = [];
+
+    function createArr() {
+        do {
+            sizeArr = +prompt('Enter a size of Array :');
+        }
+        while (sizeArr <= 0)
+
+        for (let i = 0; i < sizeArr; i++) {
+            arr[i] = +prompt('Enter a characters of ' + i + ':');
+        }
+        alert('Your Array is :' + arr)
+    }
+
+    function doMatch(arr) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i]
+        }
+        alert("Total is : " + sum)
+    }
+
+</script>
+</body>
+</html>

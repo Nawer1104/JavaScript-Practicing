@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau 1</title>
+</head>
+<body>
+<script>
+    let arr = [];
+
+    function createArr() {
+        do {
+            sizeArr = +prompt('Enter a size of Array :');
+        }
+        while (sizeArr <= 0)
+
+        for (let i = 0; i < sizeArr; i++) {
+            arr[i] = +prompt('Enter a characters of ' + i + ':');
+        }
+    }
+
+    createArr()
+
+
+    function checkEven(a) {
+        let count = 0;
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] % 2 === 0) {
+                count++
+            }
+        }
+        return count
+    }
+
+    alert('Numbers of Even-number in the Array is : ' + checkEven(arr))
+</script>
+</body>
+</html>

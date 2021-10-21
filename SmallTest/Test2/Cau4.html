@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau 4</title>
+</head>
+<body>
+<button onclick="doMatch()">Total of All Prime Numbers Below 500</button>
+<br><br>
+
+<script>
+    function doMatch() {
+        let sum = 0;
+        for (let i = 0; i < 500; i++) {
+            if (i < 2) {
+                continue
+            } else {
+                let check = true
+                for (let j = 2; j < i - 1; j++) {
+                    if (i % j === 0) {
+                        check = false
+                        break
+                    }
+                }
+                if (check === true) {
+                    sum += i;
+                }
+            }
+        }
+        alert('Total of All Prime Numbers Below 500 is : ' + sum)
+    }
+
+
+</script>
+</body>
+</html>
