@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch Buttom & Electric Lamp</title>
+</head>
+<body>
+<script>
+    class SwitchButtom {
+        status;
+
+
+        constructor(status) {
+            this.status = status;
+
+        }
+
+        getStatus () {
+            return this.status;
+        }
+
+        getLamp () {
+            return this.lamp
+        }
+
+        connectToLamp (lamp) {
+             this.lamp = lamp;
+        }
+
+        switchOff () {
+            this.status = false;
+            return this.status
+        }
+
+        switchOn () {
+            this.status = true;
+            return this.status
+        }
+
+    }
+
+    class ElectricLamp {
+        status;
+
+        constructor(status) {
+            this.status = status;
+        }
+
+        turnOff () {
+            this.status = false
+            alert('Off')
+        }
+
+        turnOn () {
+            this.status = true;
+            alert("On")
+        }
+    }
+
+    let buttom = new SwitchButtom(false);
+    let lamp = new ElectricLamp(false)
+    console.log(buttom.getStatus())
+    console.log(buttom.switchOn())
+    buttom.connectToLamp(lamp)
+    for (let i = 0; i < 10; i++) {
+        lamp.turnOn();
+        lamp.turnOff();
+    }
+
+</script>
+</body>
+</html>
