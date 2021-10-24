@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Not funny Rectangle</title>
+</head>
+<canvas id="myCanvas" width="1475px" height="735px" style="border:1px solid red;"></canvas>
+<label>
+
+</label>
+<body>
+<script>
+    class Rectangle {
+        height;
+        width;
+
+        constructor(height, width) {
+            this.height = height;
+            this.width = width;
+        }
+
+        getHeight () {
+         return    this.height
+        }
+
+        getWidth () {
+         return    this.width
+        }
+
+        setHeight (value) {
+            this.height = value
+        }
+
+        setWidth (value) {
+            this.width = value
+        }
+
+        doArea () {
+            alert(this.height * this.width;)
+        }
+
+        doPerimeter () {
+            return 2*( this.height + this.width );
+        }
+
+        createRectangle (height, width) {
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.fillStyle = '#fa4b2a';
+            ctx.fillRect(500, 100, this.width, this.height);
+        }
+    }
+
+    // function drawRectangle () {
+    //     let a = +prompt("Nhap chieu dai");
+    //     let b = +prompt("Nhap chieu rong");
+    //     let rectangle = new Rectangle(a, b);
+    //     rectangle.createRectangle(a, b)
+    // }
+    // drawRectangle()
+
+    let rectangle = new Rectangle(300 , 500);
+    // alert(rectangle.doArea())
+    // alert(rectangle.doPerimeter())
+    // rectangle.createRectangle()
+
+
+
+
+
+</script>
+</body>
+</html>

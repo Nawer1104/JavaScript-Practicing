@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile application</title>
+</head>
+<body>
+<script>
+    class Mobile {
+      battery = 100;
+      typingMessage = [] ;
+      receiveMessage = [];
+      sendMessage = [];
+      status;
+      name;
+      color;
+      price;
+      brand;
+
+      constructor(status, name, color, price, brand) {
+        this.status = status;
+        this.name = name;
+        this.color = color;
+        this.price = price;
+        this.brand = brand;
+      }
+
+      chargeBattery () {
+        this.battery = 100;
+      }
+
+      getBattery () {
+        return this.battery;
+      }
+
+      getStatus () {
+        return this.status;
+      }
+
+      getTypingMessage () {
+          return this.typingMessage;
+      }
+
+      setTypingMessage (typingMessage) {
+          this.typingMessage = typingMessage;
+      }
+
+      getReceiveMessage () {
+          return this.receiveMessage
+      }
+
+      setReceiveMessage (receiveMessage) {
+          this.receiveMessage = receiveMessage;
+      }
+
+      getSendMessage () {
+          return this.sendMessage;
+      }
+
+      setSendMassage (sendMassage) {
+          this.sendMessage = sendMassage;
+      }
+
+      switchMobile () {
+          if (this.battery > 0) {
+              this.status = !this.status;
+          } else {
+              alert('Your phone are run out of battery')
+          } return this.status
+      }
+
+      decreaseBattery () {
+          if (this.status && this.battery > 0) {
+              this.battery--;
+          } else if ( this.battery > 0) {
+              alert('Turn on your phone')
+          } else {
+              this.status = false;
+              this.battery = 0;
+          }
+      }
+
+      typingMess (message) {
+          if (this.status) {
+              this.typingMessage.push(message);
+          } else {
+              alert('Turn on your phone')
+          }
+        this.decreaseBattery()
+      }
+
+       sendMess (mobile) {
+          if (this.status && mobile.getStatus()) {
+              mobile.setReceiveMessage(this.getTypingMessage());
+              this.setSendMassage(this.getTypingMessage());
+              this.typingMessage = [];
+          } else {
+              alert('Turn on your phone')
+          }
+            this.decreaseBattery()
+       }
+    }
+
+    let nokia = new Mobile(false, "Nokia 4500", "black", 3500, "NOKIA")
+    let iphone = new Mobile(false, "Iphone 13 ProMax", "black", 10000, "IPHONE")
+    console.log(nokia.getStatus());
+    console.log(nokia.getBattery())
+    console.log(nokia.switchMobile())
+    console.log(iphone.switchMobile())
+    nokia.typingMess('Hello???')
+    console.log(nokia.getBattery())
+    nokia.sendMess(iphone)
+    console.log(nokia.getTypingMessage())
+    console.log(nokia.getSendMessage())
+    console.log(iphone.getReceiveMessage())
+</script>
+</body>
+</html>

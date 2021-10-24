@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        celsius ;
+
+        constructor(celsius) {
+            this.celsius = celsius;
+        }
+
+        changeCtoF () {
+            if (this.celsius > -273) {
+                return this.celsius *9/5 + 32;
+            }
+        }
+
+        changCtoK () {
+            if (this.celsius > -273) {
+                return this.celsius + 273;
+            }
+        }
+    }
+
+    let temperature = new Temperature(25);
+    alert(temperature.changeCtoF())
+    alert(temperature.changCtoK())
+</script>
+</body>
+</html>
