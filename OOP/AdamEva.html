@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam & Eva</title>
+</head>
+<body>
+<script>
+    class Apple {
+        weight;
+
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        getWeight () {
+            return this.weight;
+        }
+
+        setWeight (value) {
+            this.weight = value;
+        }
+
+        isEmpty () {
+            if (this.weight === 0) {
+                return true;
+            } else if (this.weight > 0) {
+                return false
+            }
+        }
+
+        decreaseWeight () {
+            if (this.isEmpty() === false ) {
+                this.weight--;
+            } else {
+                this.weight = 0;
+            }
+        }
+    }
+
+    class Human {
+       name;
+       gender;
+       weight;
+
+       constructor(name, gender, weight) {
+           this.name = name;
+           this.gender = gender;
+           this.weight = weight;
+       }
+
+       getName () {
+           return this.name;
+       }
+
+       getGender () {
+           return this.gender;
+       }
+
+       getWeight () {
+           return this.weight;
+       }
+
+       setName (name) {
+           this.name = name;
+       }
+
+       setGender (gender) {
+           this.gender = gender;
+       }
+
+       setWeight (weight) {
+           this.weight = weight;
+       }
+
+       isMale () {
+           if (this.gender === 'male') {
+               return true
+           } else {
+               return false
+           }
+       }
+
+       checkApple (apple) {
+           if (apple.isEmpty()) {
+               alert('Hết táo roài')
+           } else {
+               alert('Còn táo hehe')
+           }
+       }
+
+       sayAbilities (message) {
+           alert(this.name + ': ' + message);
+       }
+
+       eatAbilities (apple) {
+            this.weight++;
+            document.write( 'Ăn xong hơi mập :' + this.weight + '<br>');
+            apple.decreaseWeight();
+            document.write( 'Táo còn : ' + apple.getWeight() + '<br>');
+            if (apple.getWeight() === 0) {
+                alert('Hết sạch rồi ăn ít thôi');
+            }
+       }
+    }
+
+    let apple = new Apple(10);
+    let malee = new Human('Adam' , 'male', 70);
+    let femalee = new Human('Eva' , 'female', 45);
+    console.log(malee.isMale())
+    console.log(femalee.isMale())
+    console.log(apple.getWeight())
+    console.log(apple.isEmpty())
+    malee.sayAbilities('Hello Eva');
+    femalee.sayAbilities('Hi Adam');
+    malee.sayAbilities('Ăn táo khum');
+    femalee.sayAbilities('Cóa hihi ');
+    malee.checkApple(apple)
+    malee.eatAbilities(apple)
+    malee.eatAbilities(apple)
+    malee.eatAbilities(apple)
+    malee.eatAbilities(apple)
+    malee.eatAbilities(apple)
+    malee.eatAbilities(apple)
+    malee.eatAbilities(apple)
+    malee.eatAbilities(apple)
+    malee.eatAbilities(apple)
+    malee.eatAbilities(apple)
+    console.log(apple.isEmpty())
+    malee.eatAbilities(apple)
+</script>
+</body>
+</html>

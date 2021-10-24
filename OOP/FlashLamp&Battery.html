@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flash Lamp & Battery</title>
+</head>
+<body>
+<script>
+    class Battery {
+        energy;
+
+        constructor(energy) {
+            this.energy = energy;
+        }
+
+        getEnergy () {
+            return this.energy;
+        }
+
+        setEnergy (value) {
+            this.energy = value;
+        }
+
+        decreaseEnergy () {
+            if (this.energy > 0) {
+                this.energy--
+            }
+        }
+
+        rechargeEnergy () {
+            this.energy = 10;
+        }
+    }
+
+    class FlashLamp {
+        status;
+        battery
+
+        constructor(status, battery) {
+            this.status = status;
+            this.battery = battery;
+        }
+
+        setBattery (battery) {
+            this.battery = battery
+        }
+
+        getBatteryInfo () {
+            return this.battery.getEnergy();
+        }
+
+        switchOnOFf () {
+            if (this.battery.getEnergy() > 0) {
+                this.status = !this.status;
+            } else {
+                alert('Not lighting');
+            } return this.status
+        }
+
+        lightOn () {
+            if (this.status) {
+                alert('Lighting');
+                this.battery.decreaseEnergy();
+            }else {
+                alert('Not lighting')
+            }
+        }
+
+        charge () {
+            while ( this.battery.getEnergy() < 10) {
+                this.battery.rechargeEnergy()
+            }
+            alert('Full Energy')
+        }
+
+    }
+
+    let bat = new Battery(10);
+    let lamp = new FlashLamp(false, bat);
+
+    console.log(bat.getEnergy())
+    lamp.setBattery(bat)
+    console.log(lamp.getBatteryInfo())
+    console.log(lamp.switchOnOFf())
+    lamp.lightOn()
+    console.log(lamp.getBatteryInfo())
+</script>
+</body>
+</html>
