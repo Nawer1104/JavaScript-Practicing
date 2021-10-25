@@ -7,11 +7,25 @@
 <body>
 <script>
     function threeAndSeven() {
+        let count3 = 0;
+        let count7 = 0;
         for (let i = 1; i <= 100; i++) {
-            if (i % 3 === 0 || i % 7 === 0) {
-                document.write(i + '<br>')
+            if (i % 3 === 0) {
+                count3++;
+                document.write(i + ' ')
             }
         }
+
+        document.write('<br>')
+
+        for (let j = 1; j < 100; j++) {
+            if (j % 7 === 0) {
+                count7++;
+                document.write(j + ' ')
+            }
+        }
+        alert('Numbers divisible for 7 is :' + count7 + ' Numbers')
+        alert('Numbers divisible for 3 is :' + count3 + ' Numbers')
     }
 
     threeAndSeven()
