@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test3</title>
+</head>
+<body>
+<script>
+    function howOldAreYou() {
+        let yearOfBirth = +prompt('Enter Your Year Of Birth :');
+        let thisYear = 2021;
+
+        while (yearOfBirth > thisYear) {
+            alert("What was that?")
+            yearOfBirth = +prompt('Enter Again :');
+        }
+
+        let yourAge = thisYear - yearOfBirth;
+
+        alert('Your Age is :' + parseInt(yourAge))
+    }
+
+    howOldAreYou()
+</script>
+</body>
+</html>
