@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test 1</title>
+</head>
+<body>
+<script>
+    // Tạo mảng
+
+    let arr = [];
+
+    function createArr() {
+        do {
+            sizeArr = +prompt('Enter a size of Array :');
+        }
+        while (sizeArr <= 0)
+
+        for (let i = 0; i < sizeArr; i++) {
+            arr[i] = +prompt('Enter a Number of ' + i + ':');
+        }
+    }
+
+    createArr()
+
+    // Tính toán
+
+    arr.sort(function(a, b) {
+        return a - b
+    })
+
+    let number = 0
+    let j = arr.length - 3
+
+    for (let i = 0; i < arr.length; i++) {
+        if (j === i) {
+            number = arr[i]
+        }
+    }
+
+    alert('Number 3rd largest is : ' + number)
+
+
+
+</script>
+</body>
+</html>

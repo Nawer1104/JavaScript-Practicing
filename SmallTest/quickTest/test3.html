@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test3</title>
+</head>
+<body>
+<script>
+let string1 = prompt('Enter a String 1 :')
+let string2 = prompt('Enter a String 2 :')
+
+function checkString () {
+    let arr = string1.split('')
+    let arr2 = string2.split('')
+    let check = true
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr[i] === arr2[j]) {
+                check = true
+                break
+            } else {
+                check = false
+            }
+        }
+    }
+    if (check === true) {
+        alert("True")
+    } else {
+        alert("False")
+    }
+}
+checkString()
+</script>
+</body>
+</html>

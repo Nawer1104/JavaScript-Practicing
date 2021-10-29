@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test2</title>
+</head>
+<body>
+<script>
+    // Tạo mảng
+
+    let arr = [];
+
+    function createArr() {
+        do {
+            sizeArr = +prompt('Enter a size of Array :');
+        }
+        while (sizeArr <= 0)
+
+        for (let i = 0; i < sizeArr; i++) {
+            arr[i] = +prompt('Enter a Number of ' + i + ':');
+        }
+    }
+
+    function tryRemoveFromArray() {
+        number = +prompt('Enter a Index :')
+        while (number < 0 || number > arr.length - 1) {
+            number = +prompt('Enter a Index :')
+        }
+
+        arr.splice(number,1)
+        return arr
+    }
+
+    createArr()
+    tryRemoveFromArray()
+    console.log(arr)
+</script>
+</body>
+</html>
