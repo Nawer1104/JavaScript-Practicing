@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau2</title>
+</head>
+<body>
+<script>
+    // Xây dựng hàm trả về vị trí của phần tử cần tìm trong một mảng cho
+    // trước (Giả sử tất cả các phần tử trong mảng không giống nhau). Hàm có 2
+    // tham số: số phần tử cần tìm, mảng cho trước.
+    //     Viết chương trình với một mảng số nguyên được khởi tạo trước. Nhập vào một
+    // giá trị bất kỳ, sau đó kiểm tra xem giá trị số nguyên bất kỳ vừa nhập có nằm
+    // trong mảng đã nhập hay không.
+
+    // Create an Array
+    let arr = [];
+
+    function createArr() {
+        do {
+            sizeArr = +prompt('Enter a size of Array :');
+        }
+        while (sizeArr <= 0)
+
+        for (let i = 0; i < sizeArr; i++) {
+            arr[i] = +prompt('Enter a Number of ' + i + ':');
+        }
+    }
+
+    createArr()
+
+    // Hàm tìm số trong mảng
+    function findNumberInArray () {
+        let number = +prompt('Enter a Number you like : ');
+        let check;
+        for (let i = 0; i < arr.length; i++) {
+            if ( number === arr[i]) {
+                check = true;
+                break;
+            } else {
+                check = false;
+            }
+        }
+        if ( check === true) {
+            alert('Number ' + number + ' in the Array')
+        } else {
+            alert('Number ' + number + ' doesnt in the Array')
+        }
+    }
+
+    // Hàm tìm vị trí của số trong mảng
+    let i = 0
+    function findIndexOfNumberInArray () {
+        let number = +prompt('Enter a Number you like : ');
+        let check = true ;
+        for (; i < arr.length; i++) {
+            if ( number === arr[i]) {
+                alert('Number ' + number + ' in the index ' + i + ' of Array')
+                break
+            } else {
+                check = false
+            }
+        }
+        if (check === false) {
+            alert('No index of number ' + number + ' in the Array')
+        }
+    }
+    findNumberInArray()
+    findIndexOfNumberInArray()
+
+</script>
+</body>
+</html>

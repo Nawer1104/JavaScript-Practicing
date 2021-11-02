@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau3</title>
+</head>
+<body>
+<script>
+    // Viết hàm đếm số ký tự nguyên âm trong một chuỗi cho trước. Hàm có
+    // 1 tham số truyền vào mà một mảng các ký tự. Hàm trả về false nếu không có
+    // ký tự nguyên âm nào.
+    //     Viết chương trình nhập vào một chuỗi bất kỳ. Gọi hàm tìm số ký tự nguyên
+    // âm vừa xây dựng ở trên.
+    //     Nguyên âm là các ký tự: a, o, e, u, i
+
+    // Create an Array
+    let arr = [];
+
+    function createArr() {
+        do {
+            sizeArr = prompt('Enter a size of Array :');
+        }
+        while (sizeArr <= 0)
+
+        for (let i = 0; i < sizeArr; i++) {
+            arr[i] = prompt('Enter a Character of ' + i + ':');
+        }
+    }
+
+    createArr()
+
+    let check;
+    let number = 0;
+
+    function findCharacterInArray() {
+        let string = prompt('Enter a string you like : ');
+        let stringToFind = string.split('');
+        let stringWeHave = ['a' , 'o' , 'e' , 'u', 'i'];
+
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < stringToFind.length; j++) {
+                for (let k = 0; k < stringWeHave.length; k++) {
+                    if (arr[i] === stringToFind[j] && arr[i] === stringWeHave[k]) {
+                        number++
+                    }
+                }
+            }
+        }
+        if (number !== 0) {
+            check = true
+        } else {
+            check = false
+        }
+        return check
+    }
+
+    findCharacterInArray()
+    console.log(check)
+    console.log(number)
+
+    document.write('Số kí tự nguyên âm xuất hiện trong mảng là: ' + number + ' lần')
+
+</script>
+</body>
+</html>
